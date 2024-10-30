@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teorema da Bissetriz</title>
+</head>
+<body>
+    <script>
+        // Função para calcular a razão da bissetriz interna
+        function bissetrizInterna(ladoA, ladoB, ladoC) {
+            // Calcula a razão dos segmentos divididos pela bissetriz interna
+            return ladoA / ladoC;
+        }
+
+        // Função para calcular a razão da bissetriz externa
+        function bissetrizExterna(ladoA, ladoB, ladoC) {
+            // Calcula a razão dos segmentos divididos pela bissetriz externa com sinal invertido
+            return -ladoA / ladoC;
+        }
+
+        // Solicita os comprimentos dos lados do triângulo
+        const ladoA = parseFloat(prompt("Informe o comprimento do lado AB:"));
+        const ladoB = parseFloat(prompt("Informe o comprimento do lado AC:"));
+        const ladoC = parseFloat(prompt("Informe o comprimento do lado BC:"));
+
+        // Calcula e exibe a razão para a bissetriz interna
+        const razaoInterna = bissetrizInterna(ladoA, ladoB, ladoC);
+        console.log(`A razão entre os segmentos divididos pela bissetriz interna é ${razaoInterna.toFixed(2)}`);
+
+        // Calcula e exibe a razão para a bissetriz externa
+        const razaoExterna = bissetrizExterna(ladoA, ladoB, ladoC);
+        console.log(`A razão entre os segmentos divididos pela bissetriz externa é ${razaoExterna.toFixed(2)}`);
+    </script>
+</body>
+</html>
